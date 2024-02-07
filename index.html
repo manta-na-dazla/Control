@@ -1,47 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Помощник</title>
-    <style>
-        .chat-container {
-            width: 300px;
-            height: 400px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            overflow-y: scroll;
-        }
-        .chat-input {
-            width: 100%;
-            height: 40px;
-            margin-top: 10px;
-        }
-    </style>
+  <title>Рабочий помощник</title>
 </head>
 <body>
-    <div class="chat-container" id="chatContainer"></div>
-    <input type="text" class="chat-input" id="chatInput" placeholder="Введите сообщение..." />
-
-    <script>
-        var chatContainer = document.getElementById("chatContainer");
-        var chatInput = document.getElementById("chatInput");
-
-        function sendMessage() {
-            var message = chatInput.value;
-            if (message) {
-                var chatMessage = document.createElement("div");
-                chatMessage.innerHTML = "<strong>Вы:</strong> " + message;
-                chatContainer.appendChild(chatMessage);
-                chatInput.value = "";
-
-                // Здесь можно добавить код для обработки сообщения и получения ответа от помощника
-            }
-        }
-
-        chatInput.addEventListener("keyup", function(event) {
-            if (event.keyCode === 13) { // Отслеживаем нажатие клавиши Enter
-                sendMessage();
-            }
-        });
+  <h1>Рабочий помощник</h1>
+  
+  <div id="output"></div>
+  
+  <input type="text" id="input" placeholder="Ваш запрос">
+  <button onclick="handleInput()">Отправить</button>
+  
+  <script>
+    function handleInput() {
+      var input = document.getElementById("input").value;
+      // Здесь вы можете добавить логику для обработки введенного запроса
+      // и вывода соответствующего ответа
+      
+      // Пример:
+      var output = document.getElementById("output");
+      output.innerHTML = "Ваш запрос: " + input;
+    }
     <script src="helper.js"></script>
 </body>
 </html>
