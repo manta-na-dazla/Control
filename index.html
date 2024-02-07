@@ -1,26 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Рабочий помощник</title>
+  <title>Помощник</title>
+  <script src="script.js"></script>
 </head>
 <body>
-  <h1>Рабочий помощник</h1>
-  
-  <div id="output"></div>
-  
-  <input type="text" id="input" placeholder="Ваш запрос">
-  <button onclick="handleInput()">Отправить</button>
-  
-  <script>
-    function handleInput() {
-      var input = document.getElementById("input").value;
-      // Здесь вы можете добавить логику для обработки введенного запроса
-      // и вывода соответствующего ответа
-      
-      // Пример:
-      var output = document.getElementById("output");
-      output.innerHTML = "Ваш запрос: " + input;
-    }
-    <script src="helper.js"></script>
+  <h1>Добро пожаловать!</h1>
+  <p>Чем я могу вам помочь?</p>
+  <input type="text" id="user-input">
+  <button onclick="getResponse()">Отправить</button>
+  <div id="response"></div>
 </body>
 </html>
